@@ -1,26 +1,16 @@
 <?php
 /**
- * Mobile Detect Library
- * =====================
- *
- * Motto: "Every business should have a mobile detection script to detect mobile readers"
  *
  * Mobile_Detect is a lightweight PHP class for detecting mobile devices (including tablets).
  * It uses the User-Agent string combined with specific HTTP headers to detect the mobile environment.
  *
- * @author      Current authors: Serban Ghita <serbanghita@gmail.com>, Nick Ilyin <nick.ilyin@gmail.com>
- *              Original author: Victor Stanciu <vic.stanciu@gmail.com>
- *
  * @license     Code and contributions have 'MIT License'
- *              More details: https://github.com/serbanghita/Mobile-Detect/blob/master/LICENSE.txt
+ *              More details: https://github.com/mega6382/mobile_detect/blob/master/license.txt
  *
- * @link        Homepage:     http://mobiledetect.net
- *              GitHub Repo:  https://github.com/serbanghita/Mobile-Detect
- *              Google Code:  http://code.google.com/p/php-mobile-detect/
- *              README:       https://github.com/serbanghita/Mobile-Detect/blob/master/README.md
- *              HOWTO:        https://github.com/serbanghita/Mobile-Detect/wiki/Code-examples
+ * @link        GitHub Repo:  https://github.com/mega6382/mobile_detect/
+ *              
  *
- * @version     2.8.3
+ * @version     1.0
  */
 
 class Mobile_Detect
@@ -28,21 +18,18 @@ class Mobile_Detect
     /**
      * Mobile detection type.
      *
-     * @deprecated since version 2.6.9
      */
     const DETECTION_TYPE_MOBILE     = 'mobile';
 
     /**
      * Extended detection type.
      *
-     * @deprecated since version 2.6.9
      */
     const DETECTION_TYPE_EXTENDED   = 'extended';
 
     /**
      * A frequently used regular expression to extract version #s.
      *
-     * @deprecated since version 2.6.9
      */
     const VER                       = '([\w._\+]+)';
 
@@ -64,7 +51,7 @@ class Mobile_Detect
     /**
      * Stores the version number of the current release.
      */
-    const VERSION                   = '2.8.3';
+    const VERSION                   = '1.0';
 
     /**
      * A type for the version() method indicating a string return value.
@@ -91,7 +78,6 @@ class Mobile_Detect
     /**
      * The detection type, using self::DETECTION_TYPE_MOBILE or self::DETECTION_TYPE_EXTENDED.
      *
-     * @deprecated since version 2.6.9
      *
      * @var string
      */
@@ -392,7 +378,6 @@ class Mobile_Detect
         'WindowsMobileOS'   => 'Windows CE.*(PPC|Smartphone|Mobile|[0-9]{3}x[0-9]{3})|Window Mobile|Windows Phone [0-9.]+|WCE;',
         // @reference: http://en.wikipedia.org/wiki/Windows_Phone
         // http://wifeng.cn/?r=blog&a=view&id=106
-        // http://nicksnettravels.builttoroam.com/post/2011/01/10/Bogus-Windows-Phone-7-User-Agent-String.aspx
         'WindowsPhoneOS'   => 'Windows Phone 8.0|Windows Phone OS|XBLWP7|ZuneWP7',
         'iOS'               => '\biPhone.*Mobile|\biPod|\biPad',
         // http://en.wikipedia.org/wiki/MeeGo
@@ -431,7 +416,6 @@ class Mobile_Detect
         'UCBrowser'       => 'UC.*Browser|UCWEB',
         'baiduboxapp'     => 'baiduboxapp',
         'baidubrowser'    => 'baidubrowser',
-        // @ref: https://github.com/serbanghita/Mobile-Detect/issues/7
         'DiigoBrowser'    => 'DiigoBrowser',
         // http://www.puffinbrowser.com/index.php
         'Puffin'            => 'Puffin',
@@ -454,7 +438,6 @@ class Mobile_Detect
     protected static $utilities = array(
         // Experimental. When a mobile device wants to switch to 'Desktop Mode'.
         // @ref: http://scottcate.com/technology/windows-phone-8-ie10-desktop-or-mobile/
-        // @ref: https://github.com/serbanghita/Mobile-Detect/issues/57#issuecomment-15024011
         'DesktopMode' => 'WPDesktop',
         'TV'          => 'SonyDTV|HbbTV', // experimental
         'WebKit'      => '(webkit)[ /]([\w.]+)',
@@ -573,7 +556,6 @@ class Mobile_Detect
 
     /**
      * Get the current script version.
-     * This is useful for the demo.php file,
      * so people can check on what version they are testing
      * for mobile devices.
      *
@@ -706,8 +688,6 @@ class Mobile_Detect
      * Set the detection type. Must be one of self::DETECTION_TYPE_MOBILE or
      * self::DETECTION_TYPE_EXTENDED. Otherwise, nothing is set.
      *
-     * @deprecated since version 2.6.9
-     *
      * @param string $type The type. Must be a self::DETECTION_TYPE_* constant. The default
      *                     parameter is null which will default to self::DETECTION_TYPE_MOBILE.
      */
@@ -777,7 +757,6 @@ class Mobile_Detect
     /**
      * Method gets the mobile detection rules. This method is used for the magic methods $detect->is*().
      *
-     * @deprecated since version 2.6.9
      *
      * @return array All the rules (but not extended).
      */
@@ -804,7 +783,6 @@ class Mobile_Detect
      * don't necessary imply mobile. This method is used inside
      * the new $detect->is('stuff') method.
      *
-     * @deprecated since version 2.6.9
      *
      * @return array All the rules + extended.
      */
@@ -829,7 +807,6 @@ class Mobile_Detect
     /**
      * Retrieve the current set of rules.
      *
-     * @deprecated since version 2.6.9
      *
      * @return array
      */
