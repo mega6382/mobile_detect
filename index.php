@@ -11,7 +11,7 @@ $isMobile = $mobdect->isMobile();
 $properties = $mobdect->getproperties();
 var_dump($mobdect);
 var_dump($isTablet);
-var_dump($isTablet);
+var_dump($isMobile);
 var_dump($properties);
 foreach($properties as $key => $value)
 {
