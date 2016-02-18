@@ -1,6 +1,6 @@
 <?php
 
-include "mobile_detect.php";
+include "Mobile_Detect.php";
 
 $mobdect = new mobile_detect();
 //Check to see of the device is a tabelt
